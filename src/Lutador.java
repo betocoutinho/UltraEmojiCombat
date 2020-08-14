@@ -1,5 +1,5 @@
 
-public class Lutador implements CompRing {
+public class Lutador {
 	
 	private String nome;
 	private String nacionalidade;
@@ -26,7 +26,7 @@ public class Lutador implements CompRing {
 	
 	
 	//getters e setters
-	private String getNome() {
+	public String getNome() {
 		return nome;
 	}
 	private void setNome(String nome) {
@@ -57,7 +57,7 @@ public class Lutador implements CompRing {
 		this.peso = peso;
 		this.setCategoria();
 	}
-	private String getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
 	private void setCategoria() {
@@ -96,7 +96,7 @@ public class Lutador implements CompRing {
 	
 	//metodos especificos
 
-	@Override
+	
 	public void apresentar() {
 		// TODO Auto-generated method stub
 		System.out.println("-----------------------------------------------");
@@ -113,9 +113,9 @@ public class Lutador implements CompRing {
 
 
 
-	@Override
 	public void status() {
 		// TODO Auto-generated method stub
+		System.out.println("--------------------------------------------------------------");
 		System.out.println(this.getNome() + " é um peso de " + this.getCategoria());
 		System.out.println("Ganhou " + this.getVitorias() + " vezes");
 		System.out.println("Perde " + this.getDerrotas() + " vezes");
@@ -124,7 +124,7 @@ public class Lutador implements CompRing {
 
 
 
-	@Override
+
 	public void ganharLuta() {
 		this.setVitorias(this.getVitorias() + 1);
 		
@@ -132,7 +132,6 @@ public class Lutador implements CompRing {
 
 
 
-	@Override
 	public void perderLuta() {
 		// TODO Auto-generated method stub
 		this.setDerrotas(this.getDerrotas() + 1); 
@@ -140,7 +139,7 @@ public class Lutador implements CompRing {
 
 
 
-	@Override
+
 	public void empatarLuta() {
 		// TODO Auto-generated method stub
 		this.setEmpates(this.getEmpates() + 1);
